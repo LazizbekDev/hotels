@@ -4,6 +4,8 @@ import GlobalStyle from './globalStyles'
 import {SliderData} from './data/sliderData'
 import Hero from './components/Hero'
 import Dropdown from './components/Dropdown'
+import InfoSection from './components/InfoSection'
+import { InfoData1 } from './data/infoData'
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
       <Navbar toggle={toggle}/>
       <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Hero slides={SliderData}/>
+      <InfoSection {...InfoData1}/>
     </>
   );
 }
