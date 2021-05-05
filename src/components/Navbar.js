@@ -7,14 +7,13 @@ import { FaBars } from 'react-icons/fa';
 
 const Nav = styled.nav`
   height: 60px;
-  background: red;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+//   align-items: center;
   padding: 1rem 2rem;
   z-index: 100;
   width: 100%;
-  background-color: #0fa;
+  position: fixed;
 `;
 
 const Logo = styled(Link)`
@@ -52,11 +51,11 @@ const NavBtn = styled.div`
     margin-right: 24px;
 `;
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
     return (
         <Nav>
             <Logo to="/">ELICR</Logo>
-            <MenuBars/>
+            <MenuBars onClick={toggle}/>
             <NavMenu>
                 {
                     menuData.map((item, index) => {
